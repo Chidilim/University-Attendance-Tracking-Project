@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('Homeback.png'); /* Ensure this is the correct path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        nav {
+            width: 100%;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 -99px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-items {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            color: #000;
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+
+        .nav-items a:hover {
+            color: #3498db;
+        }
+
+        .main {
+            padding-top: 100px; /* Adjusted for fixed nav */
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-around; /* Adjust spacing */
+            align-items: center;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .column-left, .column-right {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .column-left h1, .column-left p {
+            margin-bottom: 20px;
+        }
+
+        .oval-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background-color: #3498db;
+            color: #000;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            animation: sway 2s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        @keyframes sway{
+            0%, 100% {transform: rotate(-5deg);}
+            50% {transform: rotate(5deg);}
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-items">
+        <a href="/">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="signin.html">Professor Login</a>
+        <a href="student_signup.php">Student Login</a>
+    </div>
+</nav>
+<section class="main">
+    <div class="main-container">
+        <div class="column-left">
+            <h1>Fast Classroom Sign-in</h1>
+            <p>No hassle. Take attendance in less than 2 minutes! Get started now!</p>
+            <div class="identity-buttons">
+                <a href="signup.html" class="oval-button">I am a Professor</a>
+                <a href="student_signup.php" class="oval-button">I am a Student</a>
+            </div>
+        </div>
+        <div class="column-right">
+            <img src="mascot_blue.png" alt="illustration" class="main-image">
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

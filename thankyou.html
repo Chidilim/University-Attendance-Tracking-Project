@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
+    <title>Thank You</title>
+    <style>
+        body {
+            font-family: montserrat, sans-serif;
+            background-color: #c5f1ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+        }
+        h1 {
+            font-size: 32px;
+            color: #010562;
+        }
+        p {
+            font-size: 18px;
+        }
+        img {
+            max-width: 50%;
+            height: auto;
+            margin-top: 20px;
+        }
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Prevents confetti from blocking clicks */
+            z-index: 9999; /* Places the confetti canvas on top of other content */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Thanks for the candy! See you at the next class!</p>
+        <img src="greenie_slide.png" alt="green-slide-pic">
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script>
+        // Function to create confetti effect
+        function createConfetti() {
+            var duration = 10 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 20, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 100 * (timeLeft / duration);
+                // Since particles fall down, start a bit higher than random
+                confetti({
+                    ...defaults,
+                    particleCount,
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+                });
+                confetti({
+                    ...defaults,
+                    particleCount,
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+                });
+            }, 250);
+        }
+
+        // Call the confetti function when the page loads
+        window.onload = createConfetti;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script> <!-- Confetti library -->
+</body>
+</html>

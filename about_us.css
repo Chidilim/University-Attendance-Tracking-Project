@@ -1,0 +1,291 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:montserrat, arial, verdana;
+  }
+  
+  body {
+    background-color: white;
+  }
+  
+  /* comment*/
+  nav {
+    height: 80px;
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  
+  nav a:hover {
+    color: #BFEFFE;
+    transition: 0.3s;
+  }
+  
+  .main {
+    background: white;
+    color: #fff;
+    text-align: center;
+    padding: 0px 20px;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 3rem 20px;
+  }
+  
+  .title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .title {
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin: center;
+    margin-bottom: 2px;
+    padding: 10px 20px 0px;
+  }
+  
+  .subtitle {
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 20px 40px 40px;
+    margin-top: 0%;
+  }
+  
+  .identity-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    gap: 45px;
+    border: #010562;
+    height: 55px;
+    text-align: center;
+  }
+  
+  .button-team {
+    width: 250px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 530;
+    color:#010562;
+    background-color: white;
+    border: 2px solid #d9d9d9;
+    box-shadow: 0px 0px 5px 3px #d9d9d9;
+    cursor: pointer;
+    border-radius: 4000px;
+    text-decoration: none;
+  }
+
+  .button-team:hover {
+    color:white;
+    background-color: #010562;
+    transition: 0.3s;
+  }
+
+  .button-trackmates {
+    width: 250px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 550;
+    color:#010562;
+    background-color: white;
+    border: 2px solid #d9d9d9;
+    box-shadow: 0px 0px 5px 3px #d9d9d9;
+    cursor: pointer;
+    border-radius: 4000px;
+    text-decoration: none;
+  }
+
+  .button-trackmates:hover {
+    color:white;
+    background-color: #010562;
+    transition: 0.3s;
+  }
+
+  .meet-creators-title {
+    font-size: 3rem;
+    text-align: left;
+    padding: 20px 10px 10px;
+  }
+
+  .meet-track-subtitle {
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 20px 5px 40px;
+    margin-top: 0%;
+    text-align: left;
+  }
+
+  .meet-team {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: #333;
+    padding: 30px 0px 30px;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .maahum-pic, .dilly-pic, .tomi-pic {
+    width: 33.5vh;
+    height: 33.5vh;
+    padding: 0px 0px 0px;
+    border-radius: 50%;
+  }
+
+  /* Add CSS for each person's section */
+  .meet-maahum, .meet-dilly, .meet-tomi {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0px 0px 0px;
+    justify-content: space-around;
+  }
+
+  .maahum-descrip {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 30px 10px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.75;
+    background: #ffe6e8;
+    border: 2.5px solid #ff8f8f;
+    border-radius: 30px;
+    min-width: 230px;
+    min-height: 275px;
+  }
+
+  .dilly-descrip {
+    padding: 7px 30px 10px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.75;
+    background: #ffe6f9;
+    border: 2.5px solid #ffc5f1;
+    border-radius: 40px;
+    min-width: 80%;
+    min-height: 130%;
+  }
+
+  .tomi-descrip {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 30px 10px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.75;
+    background: #fff9e6;
+    border: 2.5px solid #ffd966;
+    border-radius: 40px;
+    min-width: 80%;
+    min-height: 130%;
+  }
+
+  .team-name {
+    padding-bottom: 5px;
+    font-size: 2rem;
+  }
+
+  .meet-trackmates {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: #333;
+    padding: 30px 5px 0px;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .meet-blue {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding: 10px 5px 0px;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .trackmate-pic {
+    max-width: 50%;
+    height: 60%;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .trackmate-descrip {
+    padding: 15px 5px 0px;
+    text-align: center;
+    background: white;
+    border: 2.5px solid #d9d9d9;
+    border-radius: 30px;
+    min-width: 350px;
+    max-height: 200px;
+    justify-items: center;
+    justify-content: space-around;
+  }
+
+  .trackmate-name {
+    font-size: 2rem; 
+    font-weight: bold; 
+    margin-bottom: 5px;
+  }
+
+  .trackmate-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .meet-blue p {
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .meet-blue {
+      width: 100%;
+    }
+
+    .meet-trackmates {
+      width: 100%;
+    }
+
+    .main-container {
+      width: 100%;
+    }
+    .meet-dilly, .meet-maahum, .meet-tomi {
+      width: 100%;
+    }
+  }

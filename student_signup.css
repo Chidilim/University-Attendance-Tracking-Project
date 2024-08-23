@@ -1,0 +1,189 @@
+* {
+    font-family:montserrat, arial, verdana;
+}
+
+header {
+    background-color: #c5f1ff;
+}
+
+.body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #c5f1ff;
+}
+
+.container {
+    display: flex;
+    background-color: #c5f1ff;
+}
+
+p {
+    text-align: center;
+}
+
+.content {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.signup-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    color: #003366;
+    width: 350px;
+    text-align: left;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.input-group input {
+    width: calc(100% - 20px); /* Adjust width to match container padding */
+    padding: 10px;
+    border: 1px solid #666666;
+    border-radius: 4px;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #010562;
+    border: none;
+    border-radius: 4000px;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+button:hover {
+    background-color: #ffe6f9; /*#ff8e97; */
+    transition: 0.5s;
+    color: #010562;
+}
+
+
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.additional-links a {
+    color: #003366;
+    text-decoration: none;
+}
+
+
+.additional-links a:hover {
+    transition: 0.4s;
+    color: #ffc5f1;
+}
+
+
+
+
+@keyframes sway{
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.mascot {
+    animation: sway 2s ease-in-out infinite;
+    transform-origin: bottom center;
+    /*position: center;*/
+    margin-top: 110px;
+    width: 75vh;
+    height: 75vh;
+    /*background: url(mascot_white.png);
+    background-size: contain;*/
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+
+    .mascot, .content {
+        width: 100vw;
+        height: auto;
+    
+    }
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #c5f1ff;
+    color: black ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100vw;
+        text-align: center; /* Center the content */
+    }
+
+    .mascot {
+        width: 50vw; /* Adjusted width for smaller screens */
+        height: auto; /* Allow height to adjust according to width */
+        margin-top: 20px; /* Adjust the margin for spacing */
+        margin-left: 150px;
+
+    }
+
+    h1 {
+        font-size: 30pt;
+    }
+}
+
+h1 {
+    color: #010562;
+    font-size: 37pt;
+    top: 0%; /* Slightly raised to accommodate more inputs */
+    left: 14.5%;
+    text-align: center;
+}

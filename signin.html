@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Sign-In</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .mascot {
+            width: 50vw; /* Half the viewport width */
+            height: 100vh; /* Full viewport height */
+            background: url('mascot_white.png') center center no-repeat; /* Center mascot image */
+            background-size: contain; /* Ensure mascot image fits within its space */
+            flex-shrink: 0; /* Prevent the mascot from shrinking */
+            animation: sway 2s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        .content {
+            width: 50vw; /* Half the viewport width */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            position: relative;
+        }
+
+        @keyframes sway{
+            0%, 100% {transform: rotate(-5deg);}
+            50% {transform: rotate(5deg);}
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .mascot, .content {
+                width: 100vw; /* Full width for smaller screens */
+                height: 50vh; /* Half the viewport height */
+            }
+
+            .content {
+                justify-content: flex-start; /* Align content to the top in mobile view */
+            }
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #c5f1ff; /* Light Blue background */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            border: 10px solid #06b0f0; /* Blue border */
+        }
+
+        h1 {
+            color: #010562; /* Dark Blue */
+            position: absolute;
+            top: 10%; /* Adjust the position of the sign-in title */
+            z-index: 2; /* Ensure the title appears above the login container */
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+            color: #003366; /* Dark Blue */
+            width: 350px;
+            text-align: left;
+            position: relative; /* Use relative positioning */
+            margin-top: 20%; /* Position it below the title */
+            z-index: 1; /* Ensure the login container is below the title */
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #666666; /* Grey border */
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #010562; /* Dark Blue */
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #ff8e97; /* Light Red */
+        }
+
+        .additional-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .additional-links a {
+            color: #003366; /* Dark Blue */
+            text-decoration: none;
+        }
+
+        .additional-links a:hover {
+            text-decoration: underline;
+        }
+
+        .home-link {
+            color: #06b0f0; /* Blue */
+            text-decoration: none;
+            position: absolute;
+            bottom: 20px; /* Position near the bottom */
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mascot"></div> <!-- Using background image for mascot -->
+        <div class="content">
+            <h1>Classroom Sign-In</h1>
+            <div class="login-container">
+                <form action="signin.php" method="post">
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <div class="additional-links">
+                        <a href="reset_password.php">Forgot Password?</a>
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+            <a href="homepage.html" class="home-link">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

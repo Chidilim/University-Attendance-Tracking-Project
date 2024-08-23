@@ -1,0 +1,113 @@
+* {
+    background-color: #c5f1ff;
+    font-family: montserrat, arial, verdana;
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    padding: 40px 75px 70px 40px;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+#trackmates-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.trackmate {
+    cursor: pointer;
+    border: 4px solid #010562; /* Border thickness */
+    border-radius: 40px; /* Border radius */
+    overflow: hidden; /* Ensure the content respects border-radius */
+    width: 100%;
+    max-width: 150px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+    padding: 5px 10px 10px 5px;
+    justify-content: space-between;
+}
+
+
+.trackmate:hover {
+    transition: 0.3s;
+    border: 8px solid #010562;
+}
+
+.trackmate.selected {
+    border-width: 8px solid #010562;
+}
+
+.trackmate img {
+    width: 100%;
+    height: auto;
+}
+
+.trackmate p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.learn-more-button {
+    width: 200px;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 450;
+    color:white;
+    background-color: #010562;
+    border: 2px solid #010562;
+    cursor: pointer;
+    border-radius: 4000px;
+    text-decoration: none;
+}
+
+.learn-more-button:hover {
+    color:#010562;
+    background-color: white;
+    transition: 0.3s;
+    box-shadow: 0px 0px 5px 3px whitesmoke;
+    border: 2px solid whitesmoke;
+  }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #trackmates-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #trackmates-container {
+        grid-template-columns: 1fr 1fr; /* Ensure 2 in a row for very small screens */
+    }
+
+    .trackmate {
+        max-width: 130px; /* Adjust size for smaller screens */
+    }
+
+    .trackmate p {
+        font-size: 1rem;
+    }
+}
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents confetti from blocking clicks */
+    z-index: 9999; /* Places the confetti canvas on top of other content */
+}

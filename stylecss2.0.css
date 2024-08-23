@@ -1,0 +1,157 @@
+/* Styling for the active navigation items */
+.nav-item.active {
+    background-color: #007bff; /* Blue background color */
+    color: #ffffff; /* White text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Hover effect for active navigation items */
+.nav-item.active:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the logo */
+.logo {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align vertically */
+    gap: 10px; /* Spacing between icon and text */
+}
+
+/* Additional styling for navigation links */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Styling for the main container */
+.container {
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center container horizontally */
+}
+
+/* Styling for the main section */
+#main-content {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Align items horizontally */
+    padding: 20px; /* Add padding */
+}
+
+/* Styling for the form */
+form {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Align items horizontally */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+form input,
+form button {
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+/* Styling for the class items */
+.class-item {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    margin-bottom: 20px; /* Spacing between class items */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    width: 100%; /* Make class items full width */
+}
+
+.class-item button {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text color */
+    padding: 5px 10px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-left: 10px; /* Add margin to separate buttons */
+}
+
+.class-item button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Your existing CSS styles */
+
+/* Styling for the navbar */
+.navbar {
+    background-color: #007bff; /* Blue background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.nav-links-mobile {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links-mobile.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
